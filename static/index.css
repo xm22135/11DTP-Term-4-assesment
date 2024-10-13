@@ -1,0 +1,24 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.main_nav{
+    background-color: #034694;
+    color: white;
+    font-size: 40px;
+    height: 130px;
+}
+.main_nav a{
+    font-family: 'Koulen';
+    float: left;
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-left:100px;
+}
+.main_nav img{
+    padding-top: 15px;
+    float: left;
+    height: 90px;
+    padding-left:30px;
+}
