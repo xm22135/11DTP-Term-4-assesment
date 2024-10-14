@@ -16,9 +16,42 @@ body{
     padding-top: 20px;
     padding-left:100px;
 }
+.main_nav a:hover{
+    color: #539ff5;
+}
 .main_nav img{
     padding-top: 15px;
     float: left;
     height: 90px;
     padding-left:30px;
+}
+.banner{
+    position:relative;
+    text-align:center;
+    width:100%;
+}
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+.banner_text h1{
+    position: absolute;
+    font-family: 'Koulen';
+    text-decoration: underline;
+    color: white;
+    font-size: 100px;
+    top: 70px;
+    left: 375px;
+    bottom: 50%;
+    text-shadow: 0 0 3px #034694, 0 0 5px #034694;
+}
+.banner_text h2{
+    position: absolute;
+    font-family: 'Koulen';
+    color: white;
+    font-size: 50px;
+    top: 225px;
+    left: 660px;
+    bottom: 50%;
+    text-shadow: 0 0 3px #034694, 0 0 5px #034694;
 }
