@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    background-color: #034694;
     padding: 0px;
 }
 .main_nav{
@@ -54,4 +55,26 @@ body{
     left: 660px;
     bottom: 50%;
     text-shadow: 0 0 3px #034694, 0 0 5px #034694;
+}
+.flex{
+    display:flex;
+    flex-direction: row;
+    padding-left:100px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+#home_main{
+    color: white;
+    max-width:400px;
+    font-family:'Alike Angular';
+    padding-left:50px;
+    padding-right:50px;
+}
+#img_1{
+    max-width: 400px;
+    border: 2px solid white;
+}
+#img_2{
+    max-width: 400px;
+    border: 2px solid white;
 }
