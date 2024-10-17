@@ -1,0 +1,42 @@
+{%extends 'index.html'%}
+{%block body%}
+<h2>Season History</h2>
+<div class = "view">
+<table>
+    <thead>
+        <tr>
+            <th>Season ID</th>
+            <th>Season</th>
+            <th>Games Played</th>
+            <th>Won</th>
+            <th>Drawn</th>
+            <th>Lost</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>Points</th>
+            <th>Top Goal Scorer</th>
+            <th>Top Assist Maker</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for seasons in seasons%}
+        <tr>
+            <td>{{seasons.season_id}}</td>
+            <td>{{seasons.season}}</td>
+            <td>{{seasons.games_played}}</td>
+            <td>{{seasons.games_won}}</td>
+            <td>{{seasons.games_drawn}}</td>
+            <td>{{seasons.games_lost}}</td>
+            <td>{{seasons.goals_for}}</td>
+            <td>{{seasons.goals_against}}</td>
+            <td>{{seasons.goal_difference}}</td>
+            <td>{{seasons.points}}</td>
+            <td>{{seasons.top_goal_scorer}}</td>
+            <td>{{seasons.top_assist_maker}}</td>
+        </tr>
+        {% endfor%}
+    </tbody>
+</table>
+</div>
+{%endblock%}

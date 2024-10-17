@@ -19,6 +19,12 @@ def home():
     return render_template('home.html')
 
 @app.route('/seasonhistory', methods = ('POST','GET'))
-
+def seasonhistory():
+    conn = get_db_connection()
+    sql = 'SELECT * from seasons'
+    seasons = conn.execute(sql).fetchall()
+    conn.close
+    return render_template('seasonhistory.html', seasons = seasons)
+    
 if __name__ == '__main__':
     app.run(debug = True)
