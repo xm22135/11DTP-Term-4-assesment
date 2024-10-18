@@ -9,7 +9,7 @@
         <div class = 'main_nav'>
             <img src = "{{url_for('static', filename = 'Chelsea Logo.png')}}">
             <a href = '{{url_for("home")}}'>Home</a>
-            <a>Season History</a>
+            <a href = '{{url_for("seasonhistory")}}'>Season History</a>
             <a>Add Records</a>
         </div>
         {%block body%}
