@@ -1,7 +1,7 @@
 {%extends 'index.html'%}
 {%block body%}
-<h2>Season History</h2>
 <div class = "view">
+<h2>Season History</h2>
 <table>
     <thead>
         <tr>
@@ -38,5 +38,8 @@
         {% endfor%}
     </tbody>
 </table>
+    <div class = "background">
+        <img src = "{{url_for('static', filename = 'stamfordbridge.jpg')}}" id = 'background'>
+    </div>
 </div>
 {%endblock%}
