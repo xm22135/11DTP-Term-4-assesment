@@ -1,11 +1,22 @@
 {% extends 'index.html'%}
 {% block body%}
+
 <div class = "add">
     <h2>Add Records</h2>
-    <form method = 'post'>
-        <label for = 'season'>Season</label>
+    <div class = "add_flex">
+    <img src = "{{url_for('static', filename = 'JACKSON.jpg')}}">
+    <form method = 'post' class = "form">
         <br>
-        <input type = 'text' name = 'season' id = 'season'>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for = 'season' id = "season">Season</label>
+        <br>
+        <input type = 'text' name = 'season'>
         <br>
         <label for = 'games_played'>Games Played</label>
         <br>
@@ -49,5 +60,6 @@
         <br>
         <button type = 'submit'>Submit</button>
     </form>
+    </div>
 </div>
 {% endblock%}
