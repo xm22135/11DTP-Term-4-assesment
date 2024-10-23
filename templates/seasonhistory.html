@@ -35,9 +35,9 @@
             <td>{{seasons.top_goal_scorer}}</td>
             <td>{{seasons.top_assist_maker}}</td>
             <td>
-                <a href="">Edit</a>
+                <a href="{{url_for('edit_record', id = seasons.season_id)}}" id = "edit">Edit</a>
                 <form action="{{url_for('delete_records', id = seasons.season_id)}}" method = "post" style = "display:inline;">
-                    <button type = "submit">Delete</button>
+                    <button type = "submit" id = "delete">Delete</button>
                 </form>
             </td>
         </tr>

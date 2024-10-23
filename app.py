@@ -64,7 +64,7 @@ def delete_records(id):
 @app.route("/editrecord/<int:id>", methods = ('GET', 'POST'))
 def edit_record(id):
     conn = get_db_connection()
-    seasons = conn.execute('SELECT * from users WHERE season_id = ?'(id,)).fetchone()
+    seasons = conn.execute('SELECT * from seasons WHERE season_id = ?',(id,)).fetchone()
 
     if request.method == 'POST':
         season = request.form['season']
@@ -82,10 +82,10 @@ def edit_record(id):
             flash("All fields are required")
         else:
             conn = get_db_connection()
-            conn.execute('UPDATE seasons SET season = ?, games_played = ?, games_won = ?, games_drawn = ?, games_lost = ?, goals_for = ?,goals_against = ?,goal_difference = ?,points = ?,top_goal_scorer = ?,top_assist_maker = ? WHERE season_id = ?' (season,games_played,games_won,games_drawn,games_lost,goals_for,goals_against,goal_difference,points,top_goal_scorer,top_assist_maker, id))
+            conn.execute('UPDATE seasons SET season = ?, games_played = ?, games_won = ?, games_drawn = ?, games_lost = ?, goals_for = ?, goals_against = ?, goal_difference = ?, points = ?, top_goal_scorer = ?, top_assist_maker = ? WHERE season_id = ?', (season,games_played,games_won,games_drawn,games_lost,goals_for,goals_against,goal_difference,points,top_goal_scorer,top_assist_maker, id))
             conn.commit()
-            conn.close
-            return redirct(url_for('seasonhistory'))
+            conn.close()
+            return redirect(url_for('seasonhistory'))
     return render_template('edit.html', seasons = seasons)
 
 
