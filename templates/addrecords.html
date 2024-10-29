@@ -2,9 +2,9 @@
 {% block body%}
 
 <div class = "add">
-    <h2>Add Records</h2>
     <div class = "add_flex">
     <img src = "{{url_for('static', filename = 'JACKSON.jpg')}}">
+    <div class = "add_flex_2">
     <form method = 'post' class = "form">
         <label for = 'season' id = "season">Season</label>
         <input type = 'text' name = 'season'>
@@ -30,6 +30,7 @@
         <input type = 'text' name = 'top_assist_maker' id = 'top_assist_maker'>
         <button type = 'submit'>Submit</button>
     </form>
+    </div>
     </div>
 </div>
 {% endblock%}

@@ -26,6 +26,8 @@ def seasonhistory():
     sql = 'SELECT * from seasons'
     seasons = conn.execute(sql).fetchall()
     conn.close
+    seasons_list = [dict(season) for season in seasons]
+    print(seasons_list)
     return render_template('seasonhistory.html', seasons = seasons)
     
 @app.route('/addrecords', methods = ('POST','GET'))
